@@ -35,7 +35,7 @@ jobs:
       - name: Build and analyze
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_EMRE }}
-        run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=ArthurGlerean_devops-course
+        run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=Guimleh_tp-devops-correction-docker
         working-directory: java/simple-api-student
 
   test-backend: 
