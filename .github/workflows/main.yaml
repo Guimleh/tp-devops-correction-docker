@@ -35,7 +35,7 @@ jobs:
       - name: Build and analyze
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_EMRE }}
-        run: mvn -B verify sonar:sonar -Dsonar.projectKey=Guimleh_tp-devops-correction-docker -Dsonar.organization=guimleh -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=${{ secrets.SONAR_TOKEN }}  --file ./simple-api/pom.xml
+        run: mvn -B verify sonar:sonar -Dsonar.projectKey=Guimleh_tp-devops-correction-docker -Dsonar.organization=guimleh -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=${{ secrets.SONAR_EMRE }}  --file ./simple-api/pom.xml
         working-directory: simple-api
 
   test-backend: 
