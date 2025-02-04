@@ -36,7 +36,7 @@ jobs:
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_EMRE }}
         run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=Guimleh_tp-devops-correction-docker
-        working-directory: java/simple-api-student
+        working-directory: simple-api
 
   test-backend: 
     runs-on: ubuntu-22.04
