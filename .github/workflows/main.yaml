@@ -1,8 +1,8 @@
 name: CI devops 2025
 on:
-  # Ce job se déclenche sur push dans main et develop
+  # to begin you want to launch this job in main and develop
   push:
-    branches:
+    branches: 
       - main
   pull_request:
 
@@ -10,17 +10,17 @@ jobs:
   test-backend: 
     runs-on: ubuntu-22.04
     steps:
-      # Checkout du code source
-      - name: Checkout repository
-        uses: actions/checkout@v2.5.0
+      # checkout your github code using actions/checkout@v2.5.0
+      - uses: actions/checkout@v2.5.0
 
-      # Configuration de JDK 21 avec setup-java
+      # do the same with another action (actions/setup-java@v3) that enable to setup jdk 21
       - name: Set up JDK 21
+        uses: actions/setup-java@v3
         with:
           java-version: '21'
           distribution: 'corretto'
 
-      # Construction et tests de l'application avec Maven
+      # finally build your app with the latest command
       - name: Build and test with Maven
         run: mvn clean verify
         working-directory: simple-api
