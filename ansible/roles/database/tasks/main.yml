@@ -1,0 +1,14 @@
+---
+# tasks file for roles/database
+
+- name: Start Docker container
+  docker_container:
+    name: db
+    image: guigz534/tp-devops-bdd:latest
+    networks: 
+      - name: network_one
+    volumes:
+      - /var/lib/postgresql/data
+    env_file: /home/admin/.env
+    pull: yes
+  

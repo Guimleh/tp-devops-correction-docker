@@ -1,0 +1,10 @@
+---
+# tasks file for roles/network
+
+- name: Create a network
+  docker_network:
+    name: network_one
+
+- name: Create a network
+  docker_network:
+    name: network_two

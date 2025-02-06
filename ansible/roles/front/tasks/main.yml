@@ -1,0 +1,11 @@
+---
+# tasks file for roles/database
+
+- name: Start Front container
+  docker_container:
+    name: front
+    image: guigz534/tp-devops-front:latest
+    networks: 
+      - name: network_one
+    pull: yes
+  

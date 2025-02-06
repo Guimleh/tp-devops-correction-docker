@@ -1,0 +1,12 @@
+---
+
+- name: Start Docker container
+  docker_container:
+    name: proxy
+    ports:
+      - "8080:8080"
+      - "80:80"
+    image: guigz534/tp-devops-httpd:latest
+    pull: yes
+    networks: 
+      - name: network_two

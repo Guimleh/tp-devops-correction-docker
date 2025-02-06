@@ -1,0 +1,13 @@
+---
+# tasks file for roles/database
+
+- name: Start Docker container
+  docker_container:
+    name: simple-api
+    image: guigz534/tp-devops-simple-api:latest
+    state: started
+    networks: 
+      - name: network_one
+      - name: network_two
+    env_file: /home/admin/.env
+    pull: yes

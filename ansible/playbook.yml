@@ -1,0 +1,10 @@
+- hosts: all
+  gather_facts: true
+  become: true
+  roles:
+    - env
+    - network
+    - database
+    - app
+    - front
+    - proxy
